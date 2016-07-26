@@ -1,22 +1,41 @@
-var x = 'INC';
-var y = 'DROP';
 
-function processGrade (grade){
+
+function processGrade(grade){
+   if(grade < 70){ 
+    console.log("There is no grade like that");
+    }
+
+  else if(grade=="INC"){  
+    console.log("Your grade is incomplete");
+    }
+else   if(grade=="DROP"){  
+    console.log("You have drop the subject");
+    }
+else  if(grade > 100){ 
+    console.log("Grade is overkill");
+    }
     
-    if (grade < 70 ){
-        console.log("There is no grade like that.");
+ else if (grade < 75){
+    if(grade % 2){  
+    console.log("Your new grade is :" + parseInt(grade -3));
     }
-    else if (grade > 70){
-        console.log("Grade is overkill");
+    else {
+      console.log("Your new grade is :" + parseInt(grade -2));   
     }
-    else if (grade == x ){
-        console.log("Your grade is incomplete.");
-    }
-    else if (grade == y ) {
-        console.log("You have drop the subject.");
-    }
-}
+  }
+  
+else{
 
+ if(grade % 2){  
+    console.log("Your new grade is :" + parseInt(grade +5));
+    }
+    else {
+      console.log("Your new grade is :" + parseInt(grade +3));    
+    }
+
+  }
+
+}
 module.exports = {
     processTheGrade:processGrade
 }
