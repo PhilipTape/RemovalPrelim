@@ -7,7 +7,8 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question('Enter a grade: ',function (answer)  {
+rl.question('Enter your grade: ',function (answer)  {
+  var grade = parseInt(answer);
   var grade = (answer);
 
   utils.processTheGrade(grade);
